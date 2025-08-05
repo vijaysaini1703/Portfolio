@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vijay's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+
+    <div id="header">
+        <img src="Images/mainImg.png" class="mainImg">
+        <div class="container">
+
+
+            <nav>
+                <img src="Images/Black_Minimalist_Simple_Personal_Name_Logo-removebg-preview.png" alt="" class="logo">
+
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Aspiring Civil Engineer</p>
+                <h1>Hi, I'm <span class="typing">Vijay</span> Saini,<br></h1>
+                <p class="intro"> a 3rd year B.Tech Civil Engineering student at NIT Kurukshetra.</p>
+            </div>
+        </div>
+    </div>
+    <!-- ------------about------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/userImg-removebg-preview.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-info">Hi, I’m Vijay Saini, a passionate and dedicated third-year B.Tech Civil Engineering student at
+                        NIT Kurukshetra, originally from Maharashtra. I have a strong foundation in both core civil
+                        engineering subjects and modern web technologies. From designing infrastructure to developing
+                        interactive web applications, I aim to blend engineering logic with digital creativity. I’m an
+                        active member of the official Infrastructure Society of NIT Kurukshetra, contributing to
+                        real-world campus projects and events.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>WEB TECHNOLOGIES</span><br>1. HTML <BR> 2. CSS (Cascading style sheet) <br> 3.
+                                Basics of JAVASCRIPT <br> 4. SQL (Structuured Query Language) <br> 5. MS Excel</li>
+                            <li><span>Civil Engineering Software </span><br>1. AutoCAD (2D & 3D) <br> 2. SketchUp <br>3.
+                                STAAD Pro </li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2024 - Current </span><br>Member – Infrastructure Society, NIT Kurukshetra
+                                Contributing to the planning, design, and execution of student-led infrastructure and
+                                civil engineering projects within the institute.</li>
+                            <li><span>2024 - Current </span><br>Member – ASCE Society (Since 2024)
+                                Part of the official student chapter under the Infrastructure Society, NIT Kurukshetra.
+                                Engaging in workshops, technical events, and collaborative civil engineering projects
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2020</span><br>10th CBSE Board - 80% (Maharashtra)</li>
+                            <li><span>2022</span><br>12th CBSE Board - 88% (Maharashtra)</li>
+                            <li><span>2023 - Ongoing</span><br>B.Tech in Civil Engineering - NIT Kurukshetra.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------services---------------- -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Profiles</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-square-linkedin"></i>
+                    <h2>Likedin</h2>
+                    <p>I actively share my academic and project milstones here. Connect to view my journey, certifications, and contributions in civil engineering and beyond.</p>
+                    <a href="https://www.linkedin.com/in/vijaysaini1703/">Learn More</a>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-square-github"></i>
+                    <h2>GitHub</h2>
+                    <p>Explore my repositories where I share coding projects, web designs, and engineering tools. Open to collaboration and learning through code.</p>
+                    <a href="https://github.com/vijaysaini1703">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>LeetCode</h2>
+                    <p>Practicing data structures and algorithms to sharpen my problem-solving skills. Check out my progress and coding challenges I've tackled.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------portfolio---------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/workImg.jpg" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias asperiores expedita velit,
+                            consequatur dolorum adipisci.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/workImg.jpg" alt="">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias asperiores expedita velit,
+                            consequatur dolorum adipisci.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/workImg.jpg" alt="">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias asperiores expedita velit,
+                            consequatur dolorum adipisci.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-- -------------------contact------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>vijaysaini1703@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>7387239131</p>
+                    <div class="social-icons">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter-square"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <a href="#" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"> </textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ Vijay Saini</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx2J-aBOi9J9vKPpOVORqdSj9mlsPXX_RccnNWQuRbIP4UOgBq3Yd1P_i-khygx9P2d/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully!";
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
