@@ -203,7 +203,7 @@ nav ul li a:hover::after{
     background: #ff004f;
     transform: translateY(-10px);
 }
------------------portfolio---------------- */
+/* -----------------portfolio---------------- */ */
 .portfolio{
     padding:50px 0;
 }
@@ -244,8 +244,9 @@ nav ul li a:hover::after{
 
 }
 .layer h3{
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 20px;
+    font-size: 20px;
 
 }
 .layer a{
