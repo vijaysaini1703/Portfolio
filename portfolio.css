@@ -447,3 +447,8 @@ form input, form textarea{
 
 
 }
+@media(max-width:430px) {
+    .about-info{
+        padding-right: 10%
+    }
+}
