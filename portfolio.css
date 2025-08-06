@@ -260,6 +260,9 @@ nav ul li a:hover::after{
     height: 60px;
     border-radius: 50%;
     text-align: center;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
 }
 
 .work:hover img{
@@ -365,3 +368,82 @@ form input, form textarea{
     display: block;
 }
 /* -------------------css for mediaquery ------------------ */
+
+@media (max-width: 1300px) {
+    .about-info{
+        font-size: 16px;
+        margin-top: 0px;
+    }
+    .tab-titles{
+        margin: 10px 0px 20px ;
+    }
+
+    .layer a{
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+@media (max-width:1262px) {
+    .layer h3{
+        font-weight: 400;
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    .layer a{
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:1200px) {
+    .work-list{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    }
+    .layer h3{
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 20px;
+
+}
+.layer a{
+        width: 60px;
+        height: 60px;
+    }
+    
+
+}
+
+
+@media (max-width:1056px) {
+    .about-col-1{
+        display: none;
+    }
+    .about-col-2{
+    flex-basis: 100%;
+}
+.about-info{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .tab-titles{
+        margin: 10px 0px 20px ;
+    }
+    .tab-titles{
+        margin: 20px 0px 40px;
+    }
+    .tab-contents ul li {
+    line-height: 25px;
+}
+.contact-left{
+    flex-basis: 100%;
+
+}
+.contact-right{
+    flex-basis: 100%;
+
+}
+
+
+}
