@@ -472,3 +472,19 @@ form input, form textarea{
         display:none;
     }
 }
+@media (max-width:400px){
+    #header .mainImg{
+        left: 20%;
+    }
+    .header-text{
+        font-size: 16px;
+        margin-top: 40%;
+    }
+    .header-text h1{
+        font-size: 32px;
+        width: 170px;
+    }
+    .intro{
+        display: none;
+    }
+}
