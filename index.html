@@ -20,6 +20,7 @@
 
             <nav>
                 <img src="Images/Black_Minimalist_Simple_Personal_Name_Logo-removebg-preview.png" alt="" class="logo">
+                
 
                 <ul>
                     <li><a href="#header">Home</a></li>
@@ -28,6 +29,9 @@
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
             </nav>
             <div class="header-text">
                 <p>Aspiring Civil Engineer</p>
@@ -45,7 +49,8 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p class="about-info">Hi, I’m Vijay Saini, a passionate and dedicated third-year B.Tech Civil Engineering student at
+                    <p class="about-info">Hi, I’m Vijay Saini, a passionate and dedicated third-year B.Tech Civil
+                        Engineering student at
                         NIT Kurukshetra, originally from Maharashtra. I have a strong foundation in both core civil
                         engineering subjects and modern web technologies. From designing infrastructure to developing
                         interactive web applications, I aim to blend engineering logic with digital creativity. I’m an
@@ -100,20 +105,23 @@
                 <div>
                     <i class="fa-brands fa-square-linkedin"></i>
                     <h2>Likedin</h2>
-                    <p>I actively share my academic and project milstones here. Connect to view my journey, certifications, and contributions in civil engineering and beyond.</p>
+                    <p>I actively share my academic and project milstones here. Connect to view my journey,
+                        certifications, and contributions in civil engineering and beyond.</p>
                     <a href="https://www.linkedin.com/in/vijaysaini1703/">Learn More</a>
                 </div>
 
                 <div>
                     <i class="fa-brands fa-square-github"></i>
                     <h2>GitHub</h2>
-                    <p>Explore my repositories where I share coding projects, web designs, and engineering tools. Open to collaboration and learning through code.</p>
+                    <p>Explore my repositories where I share coding projects, web designs, and engineering tools. Open
+                        to collaboration and learning through code.</p>
                     <a href="https://github.com/vijaysaini1703">Learn More</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-code"></i>
                     <h2>LeetCode</h2>
-                    <p>Practicing data structures and algorithms to sharpen my problem-solving skills. Check out my progress and coding challenges I've tackled.</p>
+                    <p>Practicing data structures and algorithms to sharpen my problem-solving skills. Check out my
+                        progress and coding challenges I've tackled.</p>
                     <a href="#">Learn More</a>
                 </div>
             </div>
@@ -128,16 +136,21 @@
                     <img src="Images/Black and Orange Bold Creative Portfolio Presentation (1).png" alt="">
                     <div class="layer">
                         <h3>My Portfolio</h3>
-                        <p>This portfolio is a glimpse into my journey as a civil engineering student. From paper to practice, every project here tells  story of learning, designing, and building with purpose.</p>
-                        <a href="https://vijay-portfolio-1703.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <p>This portfolio is a glimpse into my journey as a civil engineering student. From paper to
+                            practice, every project here tells story of learning, designing, and building with purpose.
+                        </p>
+                        <a href="https://vijay-portfolio-1703.vercel.app/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
                     <img src="Images/ELYSIAN-min.png" alt="">
                     <div class="layer">
                         <h3>Ongoing Jewellery WEB</h3>
-                        <p>Developing a responsive jewellery website with a minimalistic layout, refined typography, and intuitive design, tailored to reflect luxury and simplicity.</p>
-                        <a href="https://jewell-project.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <p>Developing a responsive jewellery website with a minimalistic layout, refined typography, and
+                            intuitive design, tailored to reflect luxury and simplicity.</p>
+                        <a href="https://jewell-project.vercel.app/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
@@ -168,10 +181,11 @@
                         <a href="#">
                             <i class="fa-brands fa-twitter-square"></i>
                         </a>
-                        <a href="https://www.instagram.com/vijaysaini_19?igsh=NjN1ZWY2am03Nmhs&utm_source=qr" target="_blank">
+                        <a href="https://www.instagram.com/vijaysaini_19?igsh=NjN1ZWY2am03Nmhs&utm_source=qr"
+                            target="_blank">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/vijaysaini1703/" target="_blank">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                     </div>
@@ -226,8 +240,12 @@
                 .catch(error => console.error('Error!', error.message))
         })
     </script>
+    <script>
+        function toggleMenu() {
+            const navList = document.querySelector("nav ul");
+            navList.classList.toggle("show");
+        }
+    </script>
 </body>
 
 </html>
-
-
