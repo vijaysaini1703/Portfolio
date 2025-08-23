@@ -527,29 +527,81 @@ form textarea {
   color: white;
   cursor: pointer;
 }
-@media (max-width:830px){
+@media (max-width:768px){
   .menu-icon{
     display: block;
+    cursor: pointer;
   }
   nav ul {
     flex-direction: column;
     position: absolute;
-    top: 70px;
-    left: 0;
+    top: 60px;
+    right: 0;
     width: 100%;
+    z-index: 1000;
     background-color: #080808;
     display: none;
   }
-  nav ul .show {
+  nav ul.show {
     display: flex;
   }
-  nav ul li{
-    display: block;
-    margin: 15px 0;
-    text-align: center;
-  }
+ 
 }
 nav ul .show{
   border: 2px solid green;
 
+}
+
+
+
+
+@media (max-width:400px){
+
+  .hero{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.hero img{
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin: 0 auto;
+}
+.about{
+  margin-top: 0;
+  padding-top: 10px;
+}
+}
+
+
+@media (max-width:350px){
+  .hero{
+    display: none;
+  }
+
+  .sub-title{
+    font-size: 20px;
+  }
+  .about-info{
+    font-size: 16px;
+  }
+  .tab-titles{
+    margin: 20px 0px 25px;
+  }
+  .tab-links{
+    margin-right: 20px;
+    font-size: 16px;
+
+  }
+  .tab-contents ul li span{
+    font-size: 16px;
+  }
+  .tab-contents {
+    font-size: 14px;
+  }
 }
