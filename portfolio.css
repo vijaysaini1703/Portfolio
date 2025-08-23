@@ -579,7 +579,7 @@ nav ul .show{
 }
 
 
-@media (max-width:350px){
+@media (max-width:400px){
   .hero{
     display: none;
   }
