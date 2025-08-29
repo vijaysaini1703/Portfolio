@@ -520,7 +520,7 @@ form textarea {
 }
 
 
-
+/* 
 .menu-icon{
   display: none;
   font-size: 28px;
@@ -551,7 +551,7 @@ nav ul .show{
   border: 2px solid green;
 
 }
-
+ */
 
 
 
@@ -603,5 +603,47 @@ nav ul .show{
   }
   .tab-contents {
     font-size: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #080808;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
   }
 }
