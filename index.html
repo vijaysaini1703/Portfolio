@@ -4,301 +4,489 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vijay's Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="portfolio.css">
+    <title>Vijay Saini | Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div id="header">
-        <div class="hero"><img src="Images/mainImg.png" class="mainImg"></div>
-        <div class="container">
+    <!-- ================= NAVBAR ================= -->
 
+    <header id="header">
 
-            <nav>
-                <img src="Images/Black_Minimalist_Simple_Personal_Name_Logo-removebg-preview.png" alt="" class="logo">
+        <nav class="navbar">
 
-
-
-
-                <ul>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="menu-icon" onclick="toggleMenu()">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
-            <div class="header-text">
-                <p>Aspiring Civil Engineer</p>
-                <h1>Hi, I'm <span class="typing">Vijay</span> Saini,<br></h1>
-                <p class="intro"> a 4rth year B.Tech Civil Engineering student at NIT Kurukshetra.</p>
+            <div class="logo">
+                <h2>Vijay<span>Saini</span></h2>
             </div>
-        </div>
-    </div>
-    <!-- ------------about------------- -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="Images/WhatsApp Image 2026-05-26 at 2.09.40 PM.jpeg" alt="">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p class="about-info">Hi, I’m Vijay Saini, a passionate and dedicated third-year B.Tech Civil
-                        Engineering student at
-                        NIT Kurukshetra, originally from Maharashtra. I have a strong foundation in both core civil
-                        engineering subjects and modern web technologies. From designing infrastructure to developing
-                        interactive web applications, I aim to blend engineering logic with digital creativity. I’m an
-                        active member of the official Infrastructure Society of NIT Kurukshetra, contributing to
-                        real-world campus projects and events.</p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('Education')">Education</p>
 
-                    </div>
-                    <div class="tab-contents active-tab" id="Skills">
-                        <ul>
-                            <li><span>WEB TECHNOLOGIES</span><br>1. HTML <BR> 2. CSS (Cascading style sheet) <br> 3.
-                                Basics of JAVASCRIPT <br> 4. SQL (Structuured Query Language) <br> 5. MS Excel</li>
-                            <li><span>Civil Engineering Software </span><br>1. AutoCAD (2D & 3D) <br> 2. SketchUp <br>3.
-                                STAAD Pro </li>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#certifications">Certificates</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="Experience">
-                        <ul>
-                            <li><span>2024 - Current </span><br>Member – Infrastructure Society, NIT Kurukshetra
-                                Contributing to the planning, design, and execution of student-led infrastructure and
-                                civil engineering projects within the institute.</li>
-                            <li><span>2024 - Current </span><br>Member – ASCE Society (Since 2024)
-                                Part of the official student chapter under the Infrastructure Society, NIT Kurukshetra.
-                                Engaging in workshops, technical events, and collaborative civil engineering projects
-                            </li>
-                            <li><span>2025 - Current </span><br>Member – Fine Arts Society (Since 2025)
-                                Part of the official Fine Arts Society at National Institute of Technology Kurukshetra.
-                                Actively involved in artwork, creative designing, and campus decoration activities
-                                during college fests and cultural events. Contributing to team-based artistic projects
-                                and event management activities.
-                            </li>
-
-
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="Education">
-                        <ul>
-                            <li><span>2020</span><br>10th CBSE Board - 80% (Maharashtra)</li>
-                            <li><span>2022</span><br>12th CBSE Board - 88% (Maharashtra)</li>
-                            <li><span>2023 - Ongoing</span><br>B.Tech in Civil Engineering - NIT Kurukshetra.</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="menu-btn" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
             </div>
-        </div>
-    </div>
-    <!-- ---------------------certifications---------------------- -->
 
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Certifications</h1>
-            <div class="services-list certifications-list">
-                <div>
-                    <i class="fa-solid fa-certificate"></i>
-                    <h2>TCS ION Career Edge - Young Professional program</h2>
-                    <p>Proud to share that I have successfully completed the TCS ION Career Edge - Young Professional
-                        program by Tata consultancy Services.</p>
-                    <a href="https://drive.google.com/file/d/1MCROH7zhR7BmGfKbMRLxNtMEVHNtkY2m/view?usp=drive_link"
-                        target="_blank">Learn More</a>
+        </nav>
+
+        <!-- ================= HERO ================= -->
+
+        <div class="hero">
+
+            <div class="hero-content">
+
+                <p class="tagline">
+                    CIVIL ENGINEER • WEB DEVELOPER
+                </p>
+
+                <h1>
+                    Hi, I'm
+                    <span>Vijay Saini</span>
+                </h1>
+
+                <h3>
+                    B.Tech Civil Engineering Student
+                </h3>
+
+                <p class="hero-text">
+                    Passionate Civil Engineering student at NIT Kurukshetra,
+                    combining engineering principles with modern web development,
+                    design and digital innovation.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn primary-btn">
+                        View Projects
+                    </a>
+
+                    <a href="#contact" class="btn secondary-btn">
+                        Contact Me
+                    </a>
+
                 </div>
 
+                <div class="hero-socials">
 
-                <div>
-                    <i class="fa-solid fa-award"></i>
-                    <h2>Complete AutoCAD 2D + 3D Course</h2>
+                    <a href="https://www.linkedin.com/in/vijaysaini1703/"
+                        target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+
+                    <a href="https://github.com/vijaysaini1703"
+                        target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/vijayyyyy.17/"
+                        target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img src="Images/mainImg.png" alt="Vijay Saini">
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>About Me</h2>
+                <span></span>
+            </div>
+
+            <div class="about-content">
+
+                <div class="about-image">
+                    <img src="Images/WhatsApp Image 2026-05-26 at 2.09.40 PM.jpeg"
+                        alt="Vijay Saini">
+                </div>
+
+                <div class="about-text">
+
+                    <h3>
+                        Aspiring Civil Engineer &
+                        Front-End Developer
+                    </h3>
+
                     <p>
-                        Successfully completed a comprehensive AutoCAD training program covering
-                        2D drafting, 3D modeling, drawing standards, and practical design workflows
-                        used in engineering and construction projects.</p>
-                    <a href="https://drive.google.com/file/d/1ldBOpVO0ntfyshodMZ6WGv7RHZzIGd-y/view?usp=drive_link">Learn More</a>
-                </div>
+                        I am Vijay Saini, a B.Tech Civil Engineering student
+                        at NIT Kurukshetra with a strong interest in
+                        structural design, infrastructure planning and
+                        modern web development.
+                    </p>
 
-                
-                <div>
-                    <i class="fa-solid fa-spinner"></i>
-                    <h2>Upcoming Certifications</h2>
-                    <p>Excited for the journey ahead! <br>
-                        I'm currently working on a few upcoming certifications that will help me sharpen my skills,
-                        explore new domains, and stay updated with industry standards.</p>
-                    <a href="#">Learn More</a>
+                    <p>
+                        Along with my engineering studies, I enjoy creating
+                        responsive websites, AutoCAD designs and learning
+                        new technologies that help solve real-world problems.
+                    </p>
+
+                    <div class="about-stats">
+
+                        <div class="stat-box">
+                            <h3>3+</h3>
+                            <p>Certifications</p>
+                        </div>
+
+                        <div class="stat-box">
+                            <h3>2+</h3>
+                            <p>Web Projects</p>
+                        </div>
+
+                        <div class="stat-box">
+                            <h3>4th</h3>
+                            <p>Year Student</p>
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
+
         </div>
-    </div>
 
-    <!-- ----------------services---------------- -->
+    </section>
 
-    <div id="services">
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
         <div class="container">
-            <h1 class="sub-title">My Profiles</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-brands fa-square-linkedin"></i>
-                    <h2>Linkedin</h2>
-                    <p>I actively share my academic and project milstones here. Connect to view my journey,
-                        certifications, and contributions in civil engineering and beyond.</p>
-                    <a href="https://www.linkedin.com/in/vijaysaini1703/">Learn More</a>
-                </div>
 
-                <div>
-                    <i class="fa-brands fa-square-github"></i>
-                    <h2>GitHub</h2>
-                    <p>Explore my repositories where I share coding projects, web designs, and engineering tools. Open
-                        to collaboration and learning through code.</p>
-                    <a href="https://github.com/vijaysaini1703">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>LeetCode</h2>
-                    <p>Practicing data structures and algorithms to sharpen my problem-solving skills. Check out my
-                        progress and coding challenges I've tackled.</p>
-                    <a href="#">Learn More</a>
-                </div>
+            <div class="section-title">
+                <h2>Skills</h2>
+                <span></span>
             </div>
-        </div>
-    </div>
-    <!-- -----------------portfolio---------------- -->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="Images/Black and Orange Bold Creative Portfolio Presentation (1).png" alt="">
-                    <div class="layer">
-                        <h3>My Portfolio</h3>
-                        <p>This portfolio is a glimpse into my journey as a civil engineering student. From paper to
-                            practice, every project here tells story of learning, designing, and building with purpose.
-                        </p>
-                        <a href="https://vijay-portfolio-1703.vercel.app/" target="_blank"><i
-                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
                 </div>
-                <div class="work">
-                    <img src="Images/ELYSIAN-min.png" alt="">
-                    <div class="layer">
-                        <h3>Ongoing Jewellery WEB</h3>
-                        <p>Developing a responsive jewellery website with a minimalistic layout, refined typography, and
-                            intuitive design, tailored to reflect luxury and simplicity.</p>
-                        <a href="https://jewell-project.vercel.app/" target="_blank"><i
-                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
+
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
                 </div>
-                <div class="work">
-                    <img src="Images/workImg.jpg" alt="">
-                    <div class="layer">
-                        <h3>Upcoming Projects </h3>
-                        <p>fluydfkjhghviyvviuviyvjvjugcuifjhvjvuvigvivhjv</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
+
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
                 </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-drafting-compass"></i>
+                    <h3>AutoCAD</h3>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-building"></i>
+                    <h3>STAAD Pro</h3>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-cube"></i>
+                    <h3>SketchUp</h3>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-file-excel"></i>
+                    <h3>MS Excel</h3>
+                </div>
+
             </div>
-            <a href="#" class="btn">See More</a>
+
         </div>
-    </div>
 
-    <!-- -------------------contact------------------- -->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i>vijaysaini1703@gmail.com</p>
-                    <p><i class="fa-solid fa-phone-volume"></i>7387239131</p>
-                    <div class="social-icons">
-                        <a href="#">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-twitter-square"></i>
-                        </a>
-                        <a href="https://www.instagram.com/vijayyyyy.17?igsh=NjN1ZWY2am03Nmhs&utm_source=qr"
-                            target="_blank">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/vijaysaini1703/" target="_blank">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                    </div>
-                    <a href="https://drive.google.com/file/d/1JtQM9ryQq93R7gQF6BS3CN4hC3_DamA5/view?usp=drive_link"
-                        class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"> </textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
+    </section>
 
-                </div>
+    <!-- ================= CERTIFICATIONS ================= -->
+
+<section id="certifications">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Certifications</h2>
+            <span></span>
+        </div>
+
+        <div class="certificate-grid">
+
+            <div class="certificate-card">
+                <i class="fa-solid fa-certificate"></i>
+
+                <h3>TCS iON Career Edge</h3>
+
+                <p>
+                    Successfully completed the TCS iON Career Edge –
+                    Young Professional Program by Tata Consultancy Services.
+                </p>
+
+                <a href="https://drive.google.com/file/d/1MCROH7zhR7BmGfKbMRLxNtMEVHNtkY2m/view"
+                    target="_blank">
+                    View Certificate
+                </a>
             </div>
+
+            <div class="certificate-card">
+                <i class="fa-solid fa-award"></i>
+
+                <h3>AutoCAD 2D + 3D</h3>
+
+                <p>
+                    Comprehensive AutoCAD training covering drafting,
+                    modeling, drawing standards and engineering workflows.
+                </p>
+
+                <a href="https://drive.google.com/file/d/1ldBOpVO0ntfyshodMZ6WGv7RHZzIGd-y/view"
+                    target="_blank">
+                    View Certificate
+                </a>
+            </div>
+
+            <div class="certificate-card">
+                <i class="fa-solid fa-spinner"></i>
+
+                <h3>Upcoming Certifications</h3>
+
+                <p>
+                    Currently preparing for advanced certifications in
+                    engineering software and web technologies.
+                </p>
+
+                <a href="#">
+                    Coming Soon
+                </a>
+            </div>
+
         </div>
-        <div class="copyright">
-            <p>Copyright @ Vijay Saini</p>
-        </div>
+
     </div>
 
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbx2J-aBOi9J9vKPpOVORqdSj9mlsPXX_RccnNWQuRbIP4UOgBq3Yd1P_i-khygx9P2d/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
+</section>
 
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully!";
-                    setTimeout(function () {
-                        msg.innerHTML = ""
-                    }, 5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
+<!-- ================= EXPERIENCE ================= -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Experience</h2>
+            <span></span>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <h3>Infrastructure Society</h3>
+                <span>2024 - Present</span>
+
+                <p>
+                    Active member involved in planning,
+                    technical events and student projects at
+                    NIT Kurukshetra.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>ASCE Student Chapter</h3>
+                <span>2024 - Present</span>
+
+                <p>
+                    Participating in workshops,
+                    technical discussions and civil engineering activities.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Fine Arts Society</h3>
+                <span>2025 - Present</span>
+
+                <p>
+                    Contributing to creative artwork,
+                    event decoration and campus activities.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-    <script>
-        function toggleMenu() {
-            const navList = document.querySelector("nav ul");
-            navList.classList.toggle("show");
-        }
-    </script>
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Projects</h2>
+            <span></span>
+        </div>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+
+                <img src="Images/Black and Orange Bold Creative Portfolio Presentation (1).png">
+
+                <div class="project-content">
+
+                    <h3>Portfolio Website</h3>
+
+                    <p>
+                        Personal portfolio website showcasing skills,
+                        certifications and projects.
+                    </p>
+
+                    <a href="https://vijay-portfolio-1703.vercel.app/"
+                        target="_blank">
+                        View Project
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="project-card">
+
+                <img src="Images/ELYSIAN-min.png">
+
+                <div class="project-content">
+
+                    <h3>Jewellery Website</h3>
+
+                    <p>
+                        Responsive luxury jewellery website with
+                        modern UI and clean design.
+                    </p>
+
+                    <a href="https://jewell-project.vercel.app/"
+                        target="_blank">
+                        View Project
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
+<!-- ================= CONTACT ================= -->
 
+<section id="contact">
 
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Contact Me</h2>
+            <span></span>
+        </div>
+
+        <div class="contact-wrapper">
+
+            <div class="contact-info">
+
+                <h3>Let's Work Together</h3>
+
+                <p>
+                    Feel free to reach out for collaboration,
+                    engineering projects or web development work.
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    vijaysaini1703@gmail.com
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 7387239131
+                </p>
+
+            </div>
+
+            <form class="contact-form">
+
+                <input type="text"
+                    placeholder="Your Name"
+                    required>
+
+                <input type="email"
+                    placeholder="Your Email"
+                    required>
+
+                <textarea rows="6"
+                    placeholder="Your Message">
+                </textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 Vijay Saini.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
 
 </html>
