@@ -686,3 +686,464 @@ border-radius:20px;
 color:#ff004f;
 font-size:40px;
 }
+
+/* ================= SKILL BARS ================= */
+
+.skills-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.skill{
+    margin-bottom:25px;
+}
+
+.skill-title{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+}
+
+.bar{
+    width:100%;
+    height:12px;
+    background:#222;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress{
+    width:0;
+    height:100%;
+    background:#ff004f;
+    border-radius:20px;
+    transition:2s;
+}
+
+/* ================= INTERNSHIP ================= */
+
+.internship-card{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    background:#161b22;
+    padding:40px;
+    border-radius:20px;
+}
+
+.internship-logo img{
+    width:120px;
+}
+
+.internship-tags{
+    margin-top:20px;
+}
+
+.internship-tags span{
+    display:inline-block;
+    padding:8px 15px;
+    background:#ff004f;
+    border-radius:20px;
+    margin:5px;
+}
+
+/* ================= PROJECTS ================= */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:#161b22;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    cursor:pointer;
+}
+
+.project-content{
+    padding:25px;
+}
+
+.project-content h3{
+    margin-bottom:10px;
+}
+
+.project-content p{
+    color:#cfcfcf;
+    margin-bottom:15px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info{
+    background:#161b22;
+    padding:30px;
+    border-radius:20px;
+}
+
+.contact-form{
+    background:#161b22;
+    padding:30px;
+    border-radius:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:#0d1117;
+    color:white;
+}
+
+.contact-form button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#ff004f;
+    color:white;
+    cursor:pointer;
+}
+
+/* ================= COUNTERS ================= */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat-card{
+    background:#161b22;
+    padding:25px;
+    text-align:center;
+    border-radius:20px;
+}
+
+.stat-card h2{
+    color:#ff004f;
+    font-size:40px;
+}
+
+/* ================= SCROLL REVEAL ================= */
+
+.skill-card,
+.project-card,
+.certificate-card,
+.timeline-item,
+.achievement-card,
+.internship-card{
+    opacity:0;
+    transform:translateY(40px);
+    transition:.8s;
+}
+
+.show{
+    opacity:1 !important;
+    transform:translateY(0) !important;
+}
+
+/* ================= DARK LIGHT MODE ================= */
+
+
+body.light-mode p,
+body.light-mode span,
+body.light-mode li {
+    color: #4b5563;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3 {
+    color: #111827;
+}
+
+body.light-mode .project-card,
+body.light-mode .certificate-card,
+body.light-mode .achievement-card,
+body.light-mode .internship-card,
+body.light-mode .contact-info,
+body.light-mode .contact-form,
+body.light-mode .stat-card {
+    background: #ffffff;
+    color: #111827;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+body.light-mode .navbar {
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(15px);
+}
+
+body.light-mode .secondary-btn {
+    border: 1px solid #ff4d7d;
+    color: #ff4d7d;
+}
+
+body.light-mode .primary-btn {
+    color: white;
+}
+
+body.light-mode {
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+.light-mode .navbar,
+.light-mode .project-card,
+.light-mode .certificate-card,
+.light-mode .achievement-card,
+.light-mode .internship-card,
+.light-mode .contact-info,
+.light-mode .contact-form,
+.light-mode .stat-card{
+    background:white;
+    color:#111;
+}
+
+.light-mode .contact-form input,
+.light-mode .contact-form textarea{
+    background:#eee;
+    color:#111;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-image img{
+        width:280px;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contact-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .internship-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .about-content{
+        flex-direction:column;
+    }
+
+    .project-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:480px){
+
+    .hero-content h1{
+        font-size:36px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr;
+    }
+
+    .nav-links{
+        width:100%;
+    }
+
+    .internship-logo img{
+        width:90px;
+    }
+}
+
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;      /* right side */
+    left: auto;       /* prevent left positioning */
+
+    width: 60px;
+    height: 60px;
+
+    background: #25D366;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+
+    text-decoration: none;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+
+    z-index: 9999;
+
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-btn i {
+    color: white;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 95px;   /* above WhatsApp button */
+    right: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    background: #ff004f;
+    color: white;
+
+    border-radius: 50%;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    z-index: 9999;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+
+    transition: 0.3s;
+}
+
+#backToTop:hover {
+    transform: scale(1.1);
+}
+
+/* ================= THEME TOGGLE SWITCH ================= */
+
+.theme-switch {
+    width: 70px;
+    height: 35px;
+    background: #1f2937;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: 0.4s;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.4);
+}
+
+/* knob */
+.switch-knob {
+    width: 28px;
+    height: 28px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+    transform: translateX(0);
+}
+
+/* sun/moon icon */
+.switch-knob i {
+    font-size: 14px;
+    color: #ffb703;
+}
+
+/* ACTIVE STATE (LIGHT MODE ON) */
+.theme-switch.active {
+    background: #e5e7eb;
+}
+
+.theme-switch.active .switch-knob {
+    transform: translateX(35px);
+    background: #111;
+}
+
+.theme-switch.active .switch-knob i {
+    color: #fff;
+}
+
+body.light-mode .about-text p {
+    color: #4b5563;
+}
+
+body.light-mode .about-text h3 {
+    color: #111827;
+}
+
+body.light-mode .stat-box {
+    background: #ffffff;
+    color: #111827;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+body.light-mode .about-image img {
+    border: 2px solid rgba(0,0,0,0.08);
+}
+
+body.light-mode #about {
+    background: #f5f7fb;
+}
+
+body.light-mode .timeline::before {
+    background: #d1d5db;
+}
+
+body.light-mode .timeline-item {
+    background: #ffffff;
+    color: #111827;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+body.light-mode .timeline-item::before {
+    background: #6366f1; /* soft modern blue instead of red */
+}
+
+body.light-mode .timeline-item p {
+    color: #4b5563;
+}
+
+body.light-mode .timeline-item h3 {
+    color: #111827;
+}
+

@@ -3,19 +3,50 @@
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
 
-menuBtn.addEventListener("click", () => {
+if (menuBtn) {
+  menuBtn.addEventListener("click", () => {
     navLinks.classList.toggle("active");
-});
-
-/* Close menu when clicking a nav link */
+  });
+}
 
 document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-    });
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
 });
 
+/* ================= DARK / LIGHT MODE ================= */
 
+const themeBtn = document.getElementById("theme-toggle");
+
+/* ================= LOAD SAVED THEME ================= */
+window.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "light") {
+    document.body.classList.add("light-mode");
+    if (themeBtn) themeBtn.classList.add("active");
+  } else {
+    document.body.classList.remove("light-mode");
+    if (themeBtn) themeBtn.classList.remove("active");
+  }
+});
+
+/* ================= TOGGLE THEME (SWIPE BUTTON) ================= */
+if (themeBtn) {
+  themeBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("light-mode");
+    themeBtn.classList.toggle("active");
+
+    if (document.body.classList.contains("light-mode")) {
+      localStorage.setItem("theme", "light");
+    } else {
+      localStorage.setItem("theme", "dark");
+    }
+
+  });
+}
 /* ================= ACTIVE NAV LINK ================= */
 
 const sections = document.querySelectorAll("section");
@@ -23,168 +54,249 @@ const navItems = document.querySelectorAll(".nav-links a");
 
 window.addEventListener("scroll", () => {
 
-    let current = "";
+  let current = "";
 
-    sections.forEach(section => {
+  sections.forEach(section => {
 
-        const sectionTop = section.offsetTop - 150;
-        const sectionHeight = section.clientHeight;
+    const sectionTop = section.offsetTop - 150;
 
-        if (pageYOffset >= sectionTop) {
-            current = section.getAttribute("id");
-        }
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
 
-    });
+  });
 
-    navItems.forEach(link => {
+  navItems.forEach(link => {
 
-        link.classList.remove("active-link");
+    link.classList.remove("active-link");
 
-        if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active-link");
-        }
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active-link");
+    }
 
-    });
+  });
 
 });
 
-
-/* ================= NAVBAR SHADOW ON SCROLL ================= */
+/* ================= NAVBAR EFFECT ================= */
 
 const navbar = document.querySelector(".navbar");
 
 window.addEventListener("scroll", () => {
 
-    if (window.scrollY > 50) {
+  if (!navbar) return;
 
-        navbar.style.background = "rgba(13,17,23,0.95)";
-        navbar.style.boxShadow = "0 5px 20px rgba(0,0,0,0.3)";
+  if (window.scrollY > 50) {
 
-    } else {
+    navbar.style.backdropFilter = "blur(15px)";
+    navbar.style.boxShadow = "0 5px 20px rgba(0,0,0,0.3)";
 
-        navbar.style.background = "rgba(13,17,23,0.8)";
-        navbar.style.boxShadow = "none";
+  } else {
 
-    }
+    navbar.style.boxShadow = "none";
+
+  }
 
 });
 
-
-/* ================= SCROLL REVEAL ANIMATION ================= */
+/* ================= SCROLL ANIMATION ================= */
 
 const revealElements = document.querySelectorAll(
-    ".skill-card, .certificate-card, .timeline-item, .project-card, .stat-box"
+  ".skill-card,.certificate-card,.project-card,.achievement-card,.timeline-item,.internship-card"
 );
 
-function revealOnScroll() {
+function reveal() {
 
-    revealElements.forEach(element => {
+  revealElements.forEach(element => {
 
-        const windowHeight = window.innerHeight;
-        const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    const top = element.getBoundingClientRect().top;
 
-        if (elementTop < windowHeight - 100) {
+    if (top < windowHeight - 100) {
+      element.classList.add("show");
+    }
 
-            element.style.opacity = "1";
-            element.style.transform = "translateY(0)";
-
-        }
-
-    });
+  });
 
 }
 
-revealElements.forEach(element => {
+window.addEventListener("scroll", reveal);
+reveal();
 
-    element.style.opacity = "0";
-    element.style.transform = "translateY(40px)";
-    element.style.transition = "all 0.8s ease";
+/* ================= SKILL BAR ANIMATION ================= */
+
+const skillBars = document.querySelectorAll(".progress");
+
+function animateSkills() {
+
+  skillBars.forEach(bar => {
+
+    const value = bar.getAttribute("data-width");
+
+    const top = bar.getBoundingClientRect().top;
+
+    if (top < window.innerHeight - 50) {
+      bar.style.width = value;
+    }
+
+  });
+
+}
+
+window.addEventListener("scroll", animateSkills);
+animateSkills();
+
+/* ================= PROJECT POPUP ================= */
+
+const projectImages = document.querySelectorAll(".project-card img");
+
+projectImages.forEach(img => {
+
+  img.addEventListener("click", () => {
+
+    const modal = document.createElement("div");
+
+    modal.style.position = "fixed";
+    modal.style.top = "0";
+    modal.style.left = "0";
+    modal.style.width = "100%";
+    modal.style.height = "100%";
+    modal.style.background = "rgba(0,0,0,0.9)";
+    modal.style.display = "flex";
+    modal.style.justifyContent = "center";
+    modal.style.alignItems = "center";
+    modal.style.zIndex = "9999";
+
+    modal.innerHTML = `
+      <img src="${img.src}"
+      style="max-width:90%;max-height:90%;border-radius:15px;">
+    `;
+
+    modal.addEventListener("click", () => {
+      modal.remove();
+    });
+
+    document.body.appendChild(modal);
+
+  });
 
 });
-
-window.addEventListener("scroll", revealOnScroll);
-
-revealOnScroll();
-
 
 /* ================= CONTACT FORM ================= */
 
-const contactForm = document.querySelector(".contact-form");
+const form = document.querySelector(".contact-form");
 
-if(contactForm){
+if (form) {
 
-    contactForm.addEventListener("submit", function(e){
+  form.addEventListener("submit", function (e) {
 
-        e.preventDefault();
+    e.preventDefault();
 
-        const button = contactForm.querySelector("button");
+    const btn = form.querySelector("button");
 
-        button.innerHTML = "Sending...";
+    btn.innerHTML = "Sending...";
 
-        setTimeout(() => {
+    setTimeout(() => {
 
-            button.innerHTML = "Message Sent ✓";
+      btn.innerHTML = "Message Sent ✓";
+      btn.style.background = "#28a745";
 
-            button.style.background = "#28a745";
+      form.reset();
 
-            contactForm.reset();
+      setTimeout(() => {
+        btn.innerHTML = "Send Message";
+        btn.style.background = "";
+      }, 3000);
 
-        }, 1500);
+    }, 1500);
 
-    });
+  });
 
 }
 
+/* ================= COUNTER ANIMATION ================= */
 
-/* ================= SMOOTH SCROLL ================= */
+const counters = document.querySelectorAll(".counter");
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+counters.forEach(counter => {
 
-    anchor.addEventListener("click", function(e) {
+  const updateCount = () => {
 
-        e.preventDefault();
+    const target = +counter.getAttribute("data-target");
+    const count = +counter.innerText;
 
-        const target = document.querySelector(this.getAttribute("href"));
+    const increment = target / 100;
 
-        if(target){
+    if (count < target) {
 
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
+      counter.innerText = Math.ceil(count + increment);
 
-        }
+      setTimeout(updateCount, 20);
 
-    });
+    } else {
 
-});
-
-
-/* ================= TYPING EFFECT ================= */
-
-const typingElement = document.querySelector(".tagline");
-
-if (typingElement) {
-
-    const text = "CIVIL ENGINEER • WEB DEVELOPER";
-
-    let index = 0;
-
-    typingElement.innerHTML = "";
-
-    function typeText() {
-
-        if (index < text.length) {
-
-            typingElement.innerHTML += text.charAt(index);
-
-            index++;
-
-            setTimeout(typeText, 80);
-
-        }
+      counter.innerText = target;
 
     }
 
-    typeText();
+  };
+
+  updateCount();
+
+});
+
+/* ================= BACK TO TOP ================= */
+
+const backTop = document.getElementById("backToTop");
+
+if (backTop) {
+
+  window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 300) {
+      backTop.style.display = "flex";
+    } else {
+      backTop.style.display = "none";
+    }
+
+  });
+
+  backTop.addEventListener("click", () => {
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  });
 
 }
+
+/* ================= TYPING EFFECT ================= */
+
+const typing = document.querySelector(".typing");
+
+if (typing) {
+
+  const text = "Civil Engineer | Web Developer";
+  let i = 0;
+
+  typing.innerHTML = "";
+
+  function type() {
+
+    if (i < text.length) {
+
+      typing.innerHTML += text.charAt(i);
+      i++;
+
+      setTimeout(type, 100);
+
+    }
+
+  }
+
+  type();
+
+}
+
