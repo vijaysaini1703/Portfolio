@@ -603,3 +603,86 @@ footer p{
 .nav-links a.active-link::after{
     width:100%;
 }
+
+#internship{
+    padding:100px 0;
+}
+
+.internship-card{
+    background:#161b22;
+    padding:40px;
+    border-radius:20px;
+    display:flex;
+    gap:30px;
+    align-items:center;
+}
+
+.internship-icon i{
+    font-size:60px;
+    color:#ff004f;
+}
+
+.internship-content h3{
+    font-size:28px;
+}
+
+.internship-content h4{
+    color:#ff4d7d;
+    margin:10px 0;
+}
+
+.internship-tags{
+    margin-top:20px;
+}
+
+.internship-tags span{
+    background:#ff004f;
+    padding:8px 15px;
+    border-radius:25px;
+    margin-right:10px;
+}
+
+.achievement-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.achievement-card{
+background:#161b22;
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:.4s;
+}
+
+.achievement-card:hover{
+transform:translateY(-10px);
+}
+
+.achievement-card h3{
+color:#ff004f;
+margin-bottom:10px;
+}
+
+.stats{
+padding:50px 0;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+text-align:center;
+}
+
+.stats-grid div{
+background:#161b22;
+padding:25px;
+border-radius:20px;
+}
+
+.stats-grid h2{
+color:#ff004f;
+font-size:40px;
+}
